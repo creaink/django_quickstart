@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入widget的静态资源 -->
+    {{ form.media }}
+</head>
+<body>
+    <form method="post" actions="{% url 'article:article' %}">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Post Artilce" />
+    </form>
+</body>
+</html>

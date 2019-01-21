@@ -1,0 +1,21 @@
+## django
+django
+
+## database client
+# psycopg2-binary
+# mysqlclient
+
+## for django admin
+# django-mptt
+
+## REST
+djangorestframework
+# djangorestframework-jwt
+
+uwsgi
+
+redis 	# redis
+# pika 	# rabbitmq
+
+celery
+eventlet

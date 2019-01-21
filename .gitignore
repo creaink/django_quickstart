@@ -1,0 +1,39 @@
+# cache
+*.pyc
+*.pyo
+*.log
+_pycache_
+.DS_Store
+
+# migration
+*/_pycache_/*
+*/*/_pycache_/*
+*/migrations/*
+*/*/migrations/*
+
+# keep it avoid remove the migrations folder
+!*/migrations/__init__.py
+!*/*/migrations/__init__.py
+
+# media
+static
+media
+
+# runtime
+log
+
+# editors
+.idea/*
+.vscode/*
+*.swc
+*.swp
+
+# database
+*.sqlite3
+
+# docker volumes
+volumes/env/*
+volumes/*/log/*
+
+# keep directory
+!.gitkeep

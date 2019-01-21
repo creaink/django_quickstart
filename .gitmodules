@@ -1,0 +1,3 @@
+[submodule "extra_apps/django_tinymce_widget"]
+	path = extra_apps/django_tinymce_widget
+	url = https://github.com/creaink/django-tinymce-widget

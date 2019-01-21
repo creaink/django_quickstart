@@ -1,0 +1,23 @@
+# editors and OS
+.DS_Store
+.idea
+.vscode
+*.swc
+*.swp
+
+# runtime
+*.log
+*.pid
+
+*.sqlite3
+*.db
+*.rdb
+
+celerybeat-schedule.*
+
+# don't copy git
+.git
+
+# need mount as volume
+log
+media

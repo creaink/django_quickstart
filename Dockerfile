@@ -36,7 +36,7 @@ RUN pip install -r requirements.txt \
 # copy code to WORKDIR
 COPY . .
 
-EXPOSE 8080
+EXPOSE 8050
 
 VOLUME [ "/root/log", \
          "/root/media" \

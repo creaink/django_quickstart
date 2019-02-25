@@ -41,7 +41,7 @@ RUN apk add --no-cache --virtual build-dependencies \
 # copy code to WORKDIR
 COPY . .
 
-EXPOSE 8000
+EXPOSE 8080
 
 VOLUME [ "/root/log", \
          "/root/media", \

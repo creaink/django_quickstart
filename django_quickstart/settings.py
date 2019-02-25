@@ -106,7 +106,7 @@ DATABASES_MYSQL = {
 		'HOST': ENV_MYSQL_HOST,
 		'PORT': ENV_MYSQL_PORT,
 		'OPTIONS': {
-			"isolation_level": "serializable",
+			# "isolation_level": "serializable",
 			'charset': ENV_MYSQL_CHARSET,
 		}
 	}
@@ -125,6 +125,17 @@ DATABASES_POSTGRESQL = {
 }
 
 DATABASES = DATABASES_SQLLTE
+
+# FIXME use sqlite3 in memory when run test
+import sys
+TESTING = ((" ".join(sys.argv)).find('manage.py test') != -1)
+if TESTING:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

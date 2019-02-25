@@ -20,7 +20,7 @@ static
 media
 
 # runtime
-log
+log/*
 
 # editors
 .idea/*

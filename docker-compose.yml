@@ -13,7 +13,7 @@ services:
       - back-tier
 
   django-quickstart:
-    image: django-quickstart:alpine
+    image: django-quickstart
     depends_on:
       - redis
     ports:
@@ -23,6 +23,7 @@ services:
       - volumes/env/django-quickstart.env
     volumes:
       - ${PWD}/volumes/django-quickstart/log:/root/log
+      - ${PWD}/volumes/django-quickstart/media:/root/media
     command: --wait redis:6379
     networks:
       - back-tier
